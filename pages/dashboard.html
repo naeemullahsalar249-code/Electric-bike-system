@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - VoltRide</title>
+    <meta name="description" content="VoltRide admin dashboard for inventory and sales management.">
+    <link rel="stylesheet" href="../cssFile/globalStyles.css">
+    <script src="../jsFile/jsFunctions.js" defer></script>
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <main class="page">
+        <div class="w-100 flex-row" style="justify-content: space-between;">
+            <h1>Admin Dashboard</h1>
+            <div class="flex-row">
+                <span style="font-weight: bold; color: var(--brand-primary-color);">Admin: John Doe</span>
+                <a href="login.html" class="link-button" style="padding:0;"><button class="sm-button border-button">Logout</button></a>
+            </div>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="w-100" style="display: flex; justify-content: center;">
+            <div class="search-bar">
+                <input type="text" placeholder="Search bikes by name, SKU, or category...">
+                <button>Search</button>
+            </div>
+        </div>
+
+        <!-- Top Metrics -->
+        <div class="dashboard-metrics">
+            <div class="metric-card">
+                <h3>Total Bikes</h3>
+                <p>1,245</p>
+            </div>
+            <div class="metric-card">
+                <h3>Total Sales</h3>
+                <p>$345,600</p>
+            </div>
+            <div class="metric-card">
+                <h3>Available Inventory</h3>
+                <p>830</p>
+            </div>
+        </div>
+
+        <!-- Low Stock Alerts -->
+        <div class="w-100 alert-panel mb-20">
+            <h3 style="color: var(--brand-accent-color); margin-top: 0;">⚠️ Low Stock Alerts</h3>
+            <p style="margin-bottom: 0;">Mountain E-Bike Pro (3 left in stock) - <a href="#" style="color: var(--brand-accent-color);">Restock Now</a></p>
+        </div>
+
+        <!-- Action Cards -->
+        <div class="card-container">
+            <div class="card">
+                <h3>View All Stock</h3>
+                <p>Browse current inventory</p>
+                <button class="w-100">View Stock</button>
+            </div>
+            <div class="card">
+                <h3>Insert New Stock</h3>
+                <p>Add new electric bikes</p>
+                <button class="w-100">Insert Stock</button>
+            </div>
+            <div class="card">
+                <h3>Update Details</h3>
+                <p>Modify existing bike details</p>
+                <button class="w-100">Update Stock</button>
+            </div>
+            <div class="card">
+                <h3>Delete Records</h3>
+                <p>Remove discontinued bikes</p>
+                <button class="w-100" style="background-color: var(--brand-accent-color);">Delete Records</button>
+            </div>
+        </div>
+
+        <!-- Charts and Reports -->
+        <div class="w-100 flex-row mb-20" style="align-items: stretch;">
+            <div style="flex: 2; min-width: 300px; background-color: var(--bg-card); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border-primary-color);">
+                <h3>Sales & Stock Overview</h3>
+                <img src="../sources/chart-sales.png" alt="Sales Chart" style="width: 100%; border-radius: var(--radius-sm);">
+            </div>
+            <div class="flex-column" style="flex: 1; min-width: 250px; justify-content: space-between;">
+                <div style="background-color: var(--bg-card); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border-primary-color);">
+                    <h3>Monthly Reports</h3>
+                    <p style="margin-bottom: 15px;">Sales and Revenue Analysis</p>
+                    <button class="w-100">Download Report</button>
+                </div>
+                <div style="background-color: var(--bg-card); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border-primary-color);">
+                    <h3>Quick Links</h3>
+                    <a href="#" class="link-button" style="display: block; padding: 5px 0;">Customer Orders</a>
+                    <a href="#" class="link-button" style="display: block; padding: 5px 0;">Delivery Status</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Available Categories -->
+        <div class="w-100 mt-20">
+            <h2>Available Bike Categories</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="min-width: 200px; max-width: 400px;">Category Name</th>
+                            <th style="min-width: 100px;">Total Models</th>
+                            <th style="min-width: 100px;">In Stock</th>
+                            <th style="min-width: 150px;">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Mountain Bikes</td>
+                            <td>12</td>
+                            <td>245</td>
+                            <td><button class="sm-button">Manage</button></td>
+                        </tr>
+                        <tr>
+                            <td>City Commuters</td>
+                            <td>8</td>
+                            <td>310</td>
+                            <td><button class="sm-button">Manage</button></td>
+                        </tr>
+                        <tr>
+                            <td>Racing Bikes</td>
+                            <td>5</td>
+                            <td>120</td>
+                            <td><button class="sm-button">Manage</button></td>
+                        </tr>
+                        <tr>
+                            <td>Folding Bikes</td>
+                            <td>4</td>
+                            <td>155</td>
+                            <td><button class="sm-button">Manage</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="text-center w-100">
+                <p>&copy; 2026 VoltRide Admin Panel.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

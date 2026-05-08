@@ -1,0 +1,39 @@
+<nav>
+    <a href="../index.html">
+        <img src="../sources/logo.png" alt="VoltRide Logo" onerror="this.src='sources/logo.png'">
+        VoltRide
+    </a>
+    <button class="menu-toggle">☰</button>
+    <ul>
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li class="dropdown">
+            <a href="../pages/products.html" class="nav-link">Products ▾</a>
+            <div class="dropdown-menu">
+                <a href="../pages/search-category.html">By Category</a>
+                <a href="../pages/search-price.html">By Price</a>
+                <a href="../pages/search-advanced.html">Advanced Search</a>
+            </div>
+        </li>
+        <li><a href="../pages/services.html" class="nav-link">Services</a></li>
+        <li><a href="../pages/contact.html" class="nav-link">Contact</a></li>
+        <li><a href="../pages/cart.html" class="nav-link">Cart</a></li>
+        <li><a href="../pages/dashboard.html" class="nav-link">Admin Dashboard</a></li>
+        <li><a href="../pages/login.html" class="nav-link"><button class="sm-button">Login</button></a></li>
+    </ul>
+</nav>
+<script>
+    // Quick fix for absolute/relative paths depending on if we are in index.html vs pages/
+    const isRoot = !window.location.pathname.includes('/pages/');
+    if (isRoot) {
+        document.querySelectorAll('.nav-link').forEach(link => {
+            if(link.getAttribute('href').startsWith('../')) {
+                link.setAttribute('href', link.getAttribute('href').substring(3));
+            }
+        });
+        document.querySelectorAll('.dropdown-menu a').forEach(link => {
+            if(link.getAttribute('href').startsWith('../')) {
+                link.setAttribute('href', link.getAttribute('href').substring(3));
+            }
+        });
+    }
+</script>
