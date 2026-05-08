@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Search - VoltRide</title>
+    <link rel="stylesheet" href="../cssFile/globalStyles.css">
+    <script src="../jsFile/jsFunctions.js" defer></script>
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+    <main class="page">
+        <div class="text-center w-100 mb-20">
+            <h1>Advanced Search</h1>
+            <p>Use multiple filters to find exactly what you need.</p>
+        </div>
+        <div class="form-container w-100 mb-20" style="max-width: 800px; margin: 0 auto;">
+            <form action="#" method="GET" style="max-width: 100%;">
+                <div class="flex-row w-100" style="align-items: flex-end;">
+                    <div style="flex: 1; min-width: 200px;">
+                        <label for="keyword">Keyword</label>
+                        <input type="text" id="keyword" placeholder="Search terms...">
+                    </div>
+                    <div style="flex: 1; min-width: 200px;">
+                        <label for="category">Category</label>
+                        <select id="category">
+                            <option value="all">All Categories</option>
+                            <option value="mountain">Mountain</option>
+                            <option value="city">City</option>
+                            <option value="racing">Racing</option>
+                            <option value="folding">Folding</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="flex-row w-100 mt-20" style="align-items: flex-end;">
+                    <div style="flex: 1; min-width: 200px;">
+                        <label for="motor">Motor Power</label>
+                        <select id="motor">
+                            <option value="all">Any Power</option>
+                            <option value="250w">250W</option>
+                            <option value="500w">500W</option>
+                            <option value="750w">750W</option>
+                            <option value="1000w">1000W+</option>
+                        </select>
+                    </div>
+                    <div style="flex: 1; min-width: 200px;">
+                        <label>Availability</label>
+                        <div class="flex-row" style="gap: 10px; padding: 10px 0;">
+                            <label style="display: flex; align-items: center; gap: 5px;"><input type="radio" name="stock" value="in-stock" checked style="width: auto;"> In Stock</label>
+                            <label style="display: flex; align-items: center; gap: 5px;"><input type="radio" name="stock" value="all" style="width: auto;"> Include Out of Stock</label>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="w-100 mt-20 lg-button">Search Directory</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div class="text-center w-100">
+            <p>&copy; 2026 VoltRide Electric Bikes.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - VoltRide</title>
+    <link rel="stylesheet" href="../cssFile/globalStyles.css">
+    <script src="../jsFile/jsFunctions.js" defer></script>
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+    <main class="page">
+        <div class="w-100">
+            <h1>Shopping Cart</h1>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="min-width: 300px; max-width: 500px;">Product</th>
+                            <th style="min-width: 100px; max-width: 150px;">Price</th>
+                            <th style="min-width: 100px; max-width: 150px;">Quantity</th>
+                            <th style="min-width: 100px; max-width: 150px;">Total</th>
+                            <th style="min-width: 50px; max-width: 100px;">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="display: flex; align-items: center; gap: 15px;">
+                                <img src="../sources/mountain-bike.png" alt="Bike" style="width: 60px; height: 60px; object-fit: cover; border-radius: var(--radius-sm); margin-bottom: 0;">
+                                Mountain Pro X1
+                            </td>
+                            <td>$2,499.00</td>
+                            <td><input type="number" value="1" style="width: 60px; padding: 5px;"></td>
+                            <td>$2,499.00</td>
+                            <td><button class="sm-button border-button" style="color: var(--brand-accent-color); border-color: var(--brand-accent-color);">Remove</button></td>
+                        </tr>
+                        <tr>
+                            <td style="display: flex; align-items: center; gap: 15px;">
+                                <img src="../sources/folding-bike.png" alt="Bike" style="width: 60px; height: 60px; object-fit: cover; border-radius: var(--radius-sm); margin-bottom: 0;">
+                                Compact Fold E1
+                            </td>
+                            <td>$1,299.00</td>
+                            <td><input type="number" value="2" style="width: 60px; padding: 5px;"></td>
+                            <td>$2,598.00</td>
+                            <td><button class="sm-button border-button" style="color: var(--brand-accent-color); border-color: var(--brand-accent-color);">Remove</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="w-100 flex-row mt-20" style="justify-content: flex-end;">
+                <div style="background-color: var(--bg-card); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border-primary-color); min-width: 300px;">
+                    <h3>Order Summary</h3>
+                    <div class="flex-row" style="justify-content: space-between; margin-bottom: 10px;">
+                        <span>Subtotal</span>
+                        <span>$5,097.00</span>
+                    </div>
+                    <div class="flex-row" style="justify-content: space-between; margin-bottom: 10px;">
+                        <span>Shipping</span>
+                        <span>Free</span>
+                    </div>
+                    <hr style="border-color: var(--border-primary-color); margin: 15px 0;">
+                    <div class="flex-row" style="justify-content: space-between; margin-bottom: 20px;">
+                        <strong>Total</strong>
+                        <strong>$5,097.00</strong>
+                    </div>
+                    <button class="w-100 lg-button">Proceed to Checkout</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="text-center w-100">
+            <p>&copy; 2026 VoltRide Electric Bikes.</p>
+        </div>
+    </footer>
+</body>
+</html>
