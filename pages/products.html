@@ -3,51 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Products - VoltRide</title>
+    <title>VoltRider E-Bikes - All Products</title>
     <link rel="stylesheet" href="../cssFile/globalStyles.css">
-    <script src="../jsFile/jsFunctions.js" defer></script>
 </head>
 <body>
+
     <div id="navbar-placeholder"></div>
+
     <main class="page">
-        <div class="w-100 flex-row" style="justify-content: space-between;">
-            <h1>Our Electric Bikes</h1>
-            <div class="search-bar" style="max-width: 300px; margin-bottom: 0;">
-                <input type="text" placeholder="Search bikes...">
-                <button>Go</button>
-            </div>
-        </div>
-        <div class="card-container w-100">
+        <h1 class="text-center">All E-Bikes</h1>
+        
+        <section class="card-container">
             <div class="card">
-                <img src="../sources/mountain-bike.png" alt="Mountain Pro">
-                <h3>Mountain Pro X1</h3>
-                <p>$2,499.00</p>
-                <button class="w-100">Add to Cart</button>
-            </div>
-            <div class="card">
-                <img src="../sources/city-bike.png" alt="City Cruiser">
-                <h3>Urban Cruiser</h3>
+                <img src="../sources/mountain-bike-real.webp" alt="Peak Explorer">
+                <h3>Peak Explorer</h3>
                 <p>$1,899.00</p>
-                <button class="w-100">Add to Cart</button>
+                <div class="flex-center mt-4">
+                    <button class="sm-button" onclick="window.location.href='cart.html'">Add to Cart</button>
+                </div>
             </div>
+            
             <div class="card">
-                <img src="../sources/racing-bike.png" alt="Aero Racer">
-                <h3>Aero Racer V2</h3>
-                <p>$3,299.00</p>
-                <button class="w-100">Add to Cart</button>
-            </div>
-            <div class="card">
-                <img src="../sources/folding-bike.png" alt="Compact Fold">
-                <h3>Compact Fold E1</h3>
+                <img src="../sources/city-bike-real.jpg" alt="Metro Glide">
+                <h3>Metro Glide</h3>
                 <p>$1,299.00</p>
-                <button class="w-100">Add to Cart</button>
+                <div class="flex-center mt-4">
+                    <button class="sm-button" onclick="window.location.href='cart.html'">Add to Cart</button>
+                </div>
             </div>
-        </div>
+
+            <div class="card">
+                <img src="../sources/racing-bike-real.webp" alt="Aero Speedster">
+                <h3>Aero Speedster</h3>
+                <p>$2,499.00</p>
+                <div class="flex-center mt-4">
+                    <button class="sm-button" onclick="window.location.href='cart.html'">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="../sources/folding-bike-real.png" alt="City Folder X">
+                <h3>City Folder X</h3>
+                <p>$1,099.00</p>
+                <div class="flex-center mt-4">
+                    <button class="sm-button" onclick="window.location.href='cart.html'">Add to Cart</button>
+                </div>
+            </div>
+        </section>
     </main>
+
     <footer>
-        <div class="text-center w-100">
-            <p>&copy; 2026 VoltRide Electric Bikes.</p>
+        <div class="footer-container">
+            <div>
+                <h2>VoltRider E-Bikes</h2>
+                <p>&copy; 2026 VoltRider E-Bikes.</p>
+            </div>
         </div>
     </footer>
+
+    <script src="../jsFile/jsFunctions.js"></script>
 </body>
 </html>

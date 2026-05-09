@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoltRider E-Bikes - Advanced Search</title>
+    <link rel="stylesheet" href="../cssFile/globalStyles.css">
+</head>
+<body>
+
+    <div id="navbar-placeholder"></div>
+
+    <main class="page">
+        <h1 class="text-center">Advanced Search</h1>
+        <p class="text-center mb-4">Find your exact match using multiple filters.</p>
+        
+        <div class="form-container" style="max-width: 800px; margin-bottom: 32px;">
+            <form action="products.html" style="display: flex; flex-wrap: wrap; gap: 16px;">
+                <div style="flex: 1 1 200px;">
+                    <label for="category">Category</label>
+                    <div class="select-container">
+                        <select id="category" name="category">
+                            <option value="all">All Categories</option>
+                            <option value="mountain">Mountain</option>
+                            <option value="city">City / Commuter</option>
+                            <option value="racing">Racing</option>
+                            <option value="folding">Folding</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div style="flex: 1 1 200px;">
+                    <label for="motor">Motor Power</label>
+                    <div class="select-container">
+                        <select id="motor" name="motor">
+                            <option value="all">Any Power</option>
+                            <option value="250w">250W</option>
+                            <option value="500w">500W</option>
+                            <option value="750w">750W</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div style="flex: 1 1 200px;">
+                    <label for="battery">Battery Range</label>
+                    <div class="select-container">
+                        <select id="battery" name="battery">
+                            <option value="all">Any Range</option>
+                            <option value="30">Up to 30 miles</option>
+                            <option value="50">Up to 50 miles</option>
+                            <option value="70">70+ miles</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div style="flex: 1 1 200px;">
+                    <label for="price-range">Price Limit</label>
+                    <input type="range" id="price-range" name="price-range" min="500" max="5000" step="100" style="width: 100%;">
+                </div>
+
+                <div class="w-full mt-4 flex-center">
+                    <button type="submit" class="lg-button">Search E-Bikes</button>
+                </div>
+            </form>
+        </div>
+
+        <section class="card-container">
+            <!-- Results will be displayed here, similar to the price search page -->
+            <div class="card">
+                <img src="../sources/mountain-bike-real.webp" alt="Peak Explorer">
+                <h3>Peak Explorer</h3>
+                <p>750W | 50mi Range | $1,899</p>
+                <div class="flex-center mt-4">
+                    <button class="sm-button">View Details</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="../sources/racing-bike-real.webp" alt="Aero Speedster">
+                <h3>Aero Speedster</h3>
+                <p>500W | 70mi Range | $2,499</p>
+                <div class="flex-center mt-4">
+                    <button class="sm-button">View Details</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div>
+                <h2>VoltRider E-Bikes</h2>
+                <p>&copy; 2026 VoltRider E-Bikes.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../jsFile/jsFunctions.js"></script>
+</body>
+</html>

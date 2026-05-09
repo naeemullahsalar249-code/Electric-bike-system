@@ -3,75 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping Cart - VoltRide</title>
+    <title>VoltRider E-Bikes - Shopping Cart</title>
     <link rel="stylesheet" href="../cssFile/globalStyles.css">
-    <script src="../jsFile/jsFunctions.js" defer></script>
 </head>
 <body>
+
     <div id="navbar-placeholder"></div>
+
     <main class="page">
-        <div class="w-100">
-            <h1>Shopping Cart</h1>
+        <h1 class="text-center">Your Shopping Cart</h1>
+        
+        <section class="w-full" style="max-width: 1000px;">
             <div class="table-container">
                 <table>
                     <thead>
                         <tr>
-                            <th style="min-width: 300px; max-width: 500px;">Product</th>
+                            <th style="min-width: 80px; max-width: 120px;">Image</th>
+                            <th style="min-width: 200px; max-width: 300px;">Product Name</th>
+                            <th style="min-width: 80px; max-width: 120px;">Quantity</th>
                             <th style="min-width: 100px; max-width: 150px;">Price</th>
-                            <th style="min-width: 100px; max-width: 150px;">Quantity</th>
                             <th style="min-width: 100px; max-width: 150px;">Total</th>
-                            <th style="min-width: 50px; max-width: 100px;">Action</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td style="display: flex; align-items: center; gap: 15px;">
-                                <img src="../sources/mountain-bike.png" alt="Bike" style="width: 60px; height: 60px; object-fit: cover; border-radius: var(--radius-sm); margin-bottom: 0;">
-                                Mountain Pro X1
+                            <td><img src="../sources/mountain-bike-real.webp" alt="Peak Explorer" style="width: 80px; border-radius: var(--radius-sm);"></td>
+                            <td>Peak Explorer Mountain E-Bike</td>
+                            <td>
+                                <input type="number" value="1" min="1" style="width: 60px;">
                             </td>
-                            <td>$2,499.00</td>
-                            <td><input type="number" value="1" style="width: 60px; padding: 5px;"></td>
-                            <td>$2,499.00</td>
-                            <td><button class="sm-button border-button" style="color: var(--brand-accent-color); border-color: var(--brand-accent-color);">Remove</button></td>
+                            <td>$1,899.00</td>
+                            <td style="font-weight: bold;">$1,899.00</td>
                         </tr>
                         <tr>
-                            <td style="display: flex; align-items: center; gap: 15px;">
-                                <img src="../sources/folding-bike.png" alt="Bike" style="width: 60px; height: 60px; object-fit: cover; border-radius: var(--radius-sm); margin-bottom: 0;">
-                                Compact Fold E1
+                            <td><img src="../sources/city-bike-real.jpg" alt="Metro Glide" style="width: 80px; border-radius: var(--radius-sm);"></td>
+                            <td>Metro Glide City E-Bike</td>
+                            <td>
+                                <input type="number" value="2" min="1" style="width: 60px;">
                             </td>
                             <td>$1,299.00</td>
-                            <td><input type="number" value="2" style="width: 60px; padding: 5px;"></td>
-                            <td>$2,598.00</td>
-                            <td><button class="sm-button border-button" style="color: var(--brand-accent-color); border-color: var(--brand-accent-color);">Remove</button></td>
+                            <td style="font-weight: bold;">$2,598.00</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-            <div class="w-100 flex-row mt-20" style="justify-content: flex-end;">
-                <div style="background-color: var(--bg-card); padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border-primary-color); min-width: 300px;">
-                    <h3>Order Summary</h3>
-                    <div class="flex-row" style="justify-content: space-between; margin-bottom: 10px;">
-                        <span>Subtotal</span>
-                        <span>$5,097.00</span>
-                    </div>
-                    <div class="flex-row" style="justify-content: space-between; margin-bottom: 10px;">
-                        <span>Shipping</span>
-                        <span>Free</span>
-                    </div>
-                    <hr style="border-color: var(--border-primary-color); margin: 15px 0;">
-                    <div class="flex-row" style="justify-content: space-between; margin-bottom: 20px;">
-                        <strong>Total</strong>
-                        <strong>$5,097.00</strong>
-                    </div>
-                    <button class="w-100 lg-button">Proceed to Checkout</button>
+
+            <div class="card" style="margin-top: 24px; margin-left: auto; width: 350px;">
+                <h2>Order Summary</h2>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                    <span>Subtotal</span>
+                    <span>$4,497.00</span>
                 </div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                    <span>Shipping</span>
+                    <span>$50.00</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 16px; font-weight: bold; font-size: 1.2rem; border-top: 1px solid var(--border-muted-color); padding-top: 8px;">
+                    <span>Total</span>
+                    <span>$4,547.00</span>
+                </div>
+                <button class="w-full">Proceed to Checkout</button>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div>
+                <h2>VoltRider E-Bikes</h2>
+                <p>&copy; 2026 VoltRider E-Bikes.</p>
             </div>
         </div>
-    </main>
-    <footer>
-        <div class="text-center w-100">
-            <p>&copy; 2026 VoltRide Electric Bikes.</p>
-        </div>
     </footer>
+
+    <script src="../jsFile/jsFunctions.js"></script>
 </body>
 </html>

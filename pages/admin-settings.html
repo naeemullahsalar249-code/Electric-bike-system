@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoltRider E-Bikes - Admin Settings</title>
+    <link rel="stylesheet" href="../cssFile/globalStyles.css">
+</head>
+<body>
+
+    <div id="navbar-placeholder"></div>
+
+    <main class="page">
+        <h1 class="text-center">Admin Configuration</h1>
+        <p class="text-center mb-4">Manage store-wide settings and administrative preferences.</p>
+        
+        <div class="form-container" style="max-width: 600px;">
+            <form action="#">
+                <div>
+                    <label for="store-name">Store Name</label>
+                    <input type="text" id="store-name" name="store-name" value="VoltRider E-Bikes">
+                </div>
+                <div>
+                    <label for="tax-rate">Default Tax Rate (%)</label>
+                    <input type="number" id="tax-rate" name="tax-rate" value="8.5" step="0.1">
+                </div>
+                <div>
+                    <label for="admin-email">Admin Notifications Email</label>
+                    <input type="email" id="admin-email" name="admin-email" value="admin@voltrider.com">
+                </div>
+                
+                <h3 class="mt-4">Payment Methods</h3>
+                <div style="flex-direction: row; gap: 10px; align-items: center; margin-bottom: 8px;">
+                    <input type="checkbox" id="pay-card" checked style="width: auto;">
+                    <label for="pay-card" style="margin-bottom: 0;">Credit/Debit Cards</label>
+                </div>
+                <div style="flex-direction: row; gap: 10px; align-items: center; margin-bottom: 8px;">
+                    <input type="checkbox" id="pay-paypal" checked style="width: auto;">
+                    <label for="pay-paypal" style="margin-bottom: 0;">PayPal</label>
+                </div>
+                <div style="flex-direction: row; gap: 10px; align-items: center;">
+                    <input type="checkbox" id="pay-crypto" style="width: auto;">
+                    <label for="pay-crypto" style="margin-bottom: 0;">Cryptocurrency</label>
+                </div>
+                
+                <div class="mt-4 flex-center">
+                    <button type="submit" class="w-full lg-button">Save Settings</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div>
+                <h2>VoltRider E-Bikes</h2>
+                <p>&copy; 2026 VoltRider E-Bikes.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../jsFile/jsFunctions.js"></script>
+    <script>
+        // Restrict access to admin only
+        document.addEventListener('DOMContentLoaded', () => {
+            const userStr = localStorage.getItem('ebike_user');
+            if (!userStr) {
+                window.location.href = 'login.html';
+            } else {
+                const user = JSON.parse(userStr);
+                if (user.role !== 'admin') {
+                    alert('Access Denied: Admins Only');
+                    window.location.href = 'dashboard.html';
+                }
+            }
+        });
+    </script>
+</body>
+</html>

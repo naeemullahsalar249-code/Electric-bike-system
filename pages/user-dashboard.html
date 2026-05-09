@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoltRider E-Bikes - My Dashboard</title>
+    <link rel="stylesheet" href="../cssFile/globalStyles.css">
+</head>
+<body>
+
+    <div id="navbar-placeholder"></div>
+
+    <main class="page">
+        <h1 class="text-center">My Account</h1>
+        <p class="text-center">Welcome back! Manage your orders and account settings here.</p>
+
+        <section class="card-container">
+            <div class="card">
+                <h3>My Rewards Points</h3>
+                <p style="font-size: 2rem; font-weight: bold; color: var(--brand-primary-color);">450</p>
+                <div class="mt-4"><button class="sm-button">Redeem</button></div>
+            </div>
+            <div class="card">
+                <h3>Account Status</h3>
+                <p style="font-size: 2rem; font-weight: bold; color: green;">Active</p>
+                <div class="mt-4"><button class="sm-button border-button">Edit Profile</button></div>
+            </div>
+        </section>
+
+        <section class="w-full" style="max-width: 1200px;">
+            <h2>My Recent Orders</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="min-width: 100px; max-width: 150px;">Order ID</th>
+                            <th style="min-width: 200px; max-width: 300px;">Product</th>
+                            <th style="min-width: 100px; max-width: 150px;">Date</th>
+                            <th style="min-width: 100px; max-width: 150px;">Status</th>
+                            <th style="min-width: 100px; max-width: 150px;">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#ORD-8901</td>
+                            <td>Peak Explorer Mountain E-Bike</td>
+                            <td>Oct 12, 2026</td>
+                            <td style="color: green; font-weight: bold;">Shipped</td>
+                            <td>$1,899.00</td>
+                        </tr>
+                        <tr>
+                            <td>#ORD-8850</td>
+                            <td>Safety Helmet & Lock Bundle</td>
+                            <td>Sep 05, 2026</td>
+                            <td style="color: green; font-weight: bold;">Delivered</td>
+                            <td>$125.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div>
+                <h2>VoltRider E-Bikes</h2>
+                <p>Powering your journey forward.</p>
+            </div>
+            <div>
+                <p>&copy; 2026 VoltRider E-Bikes.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../jsFile/jsFunctions.js"></script>
+</body>
+</html>

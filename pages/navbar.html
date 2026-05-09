@@ -1,39 +1,27 @@
 <nav>
-    <a href="../index.html">
-        <img src="../sources/logo.png" alt="VoltRide Logo" onerror="this.src='sources/logo.png'">
-        VoltRide
-    </a>
-    <button class="menu-toggle">☰</button>
-    <ul>
-        <li><a href="../index.html" class="nav-link">Home</a></li>
-        <li class="dropdown">
-            <a href="../pages/products.html" class="nav-link">Products ▾</a>
-            <div class="dropdown-menu">
-                <a href="../pages/search-category.html">By Category</a>
-                <a href="../pages/search-price.html">By Price</a>
-                <a href="../pages/search-advanced.html">Advanced Search</a>
-            </div>
-        </li>
-        <li><a href="../pages/services.html" class="nav-link">Services</a></li>
-        <li><a href="../pages/contact.html" class="nav-link">Contact</a></li>
-        <li><a href="../pages/cart.html" class="nav-link">Cart</a></li>
-        <li><a href="../pages/dashboard.html" class="nav-link">Admin Dashboard</a></li>
-        <li><a href="../pages/login.html" class="nav-link"><button class="sm-button">Login</button></a></li>
-    </ul>
+  <a href="index.html">VoltRider E-Bikes</a>
+  <div class="menu-toggle">☰</div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li class="dropdown">
+      <a href="products.html">Search Bikes ▼</a>
+      <div class="dropdown-menu">
+        <a href="categories.html">By Category</a>
+        <a href="price.html">By Price</a>
+        <a href="advanced-search.html">Advanced Search</a>
+      </div>
+    </li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="#" id="nav-dashboard-link" style="display: none;">Dashboard</a></li>
+    <li><a href="cart.html">Cart</a></li>
+    <li class="dropdown" id="auth-dropdown">
+      <a href="#">Account ▼</a>
+      <div class="dropdown-menu" id="auth-menu">
+        <a href="login.html">Login</a>
+        <a href="signup.html">Sign Up</a>
+      </div>
+    </li>
+  </ul>
 </nav>
-<script>
-    // Quick fix for absolute/relative paths depending on if we are in index.html vs pages/
-    const isRoot = !window.location.pathname.includes('/pages/');
-    if (isRoot) {
-        document.querySelectorAll('.nav-link').forEach(link => {
-            if(link.getAttribute('href').startsWith('../')) {
-                link.setAttribute('href', link.getAttribute('href').substring(3));
-            }
-        });
-        document.querySelectorAll('.dropdown-menu a').forEach(link => {
-            if(link.getAttribute('href').startsWith('../')) {
-                link.setAttribute('href', link.getAttribute('href').substring(3));
-            }
-        });
-    }
-</script>
