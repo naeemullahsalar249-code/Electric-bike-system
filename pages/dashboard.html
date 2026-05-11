@@ -15,23 +15,173 @@
         <h1 class="text-center">Admin Dashboard</h1>
         <p class="text-center">Manage your store's performance, orders, and inventory.</p>
 
+        <!-- Quick Actions -->
+        <section class="w-full" style="max-width: 1200px; margin-bottom: 2rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <button class="sm-button">➕ Add New Product</button>
+            <button class="sm-button border-button">📊 Generate Sales Report</button>
+            <button class="sm-button border-button">📧 Send Newsletter</button>
+            <button class="sm-button border-button">⚙️ Store Settings</button>
+            <button class="sm-button border-button">👥 Manage Users</button>
+        </section>
+
+        <!-- Key Metrics -->
         <section class="card-container">
             <div class="card">
-                <h3>Total Sales</h3>
+                <h3>Total Revenue</h3>
                 <p style="font-size: 2rem; font-weight: bold; color: var(--brand-primary-color);">$45,230</p>
+                <p style="font-size: 0.9rem; color: green;">&#9650; +12% from last month</p>
             </div>
             <div class="card">
                 <h3>Active Orders</h3>
                 <p style="font-size: 2rem; font-weight: bold; color: var(--brand-accent-color);">12</p>
+                <p style="font-size: 0.9rem; color: #666;">4 pending shipment</p>
             </div>
             <div class="card">
-                <h3>Low Stock Alerts</h3>
+                <h3>Total Customers</h3>
+                <p style="font-size: 2rem; font-weight: bold; color: var(--brand-primary-color);">1,284</p>
+                <p style="font-size: 0.9rem; color: green;">&#9650; +35 new this week</p>
+            </div>
+            <div class="card">
+                <h3>Inventory Alerts</h3>
                 <p style="font-size: 2rem; font-weight: bold; color: red;">3 Models</p>
+                <div class="mt-4"><button class="sm-button border-button" style="width: 100%;">Restock</button></div>
             </div>
         </section>
 
-        <section class="w-full" style="max-width: 1200px;">
-            <h2>Recent Orders</h2>
+        <!-- Middle Row: Analytics & Activity Feed -->
+        <section class="w-full" style="max-width: 1200px; display: flex; flex-wrap: wrap; gap: 2rem; margin-top: 2rem; justify-content: space-between;">
+            
+            <!-- Revenue Breakdown (CSS Chart) -->
+            <div style="flex: 1.5; min-width: 300px;">
+                <h2>Revenue by Category</h2>
+                <div class="card" style="padding: 1.5rem; height: 100%;">
+                    <div style="margin-bottom: 1rem;">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.3rem;">
+                            <span>Mountain E-Bikes</span>
+                            <strong>$22,500</strong>
+                        </div>
+                        <div style="background: #e0e0e0; border-radius: 4px; width: 100%; height: 15px;">
+                            <div style="background: var(--brand-primary-color); width: 65%; height: 100%; border-radius: 4px;"></div>
+                        </div>
+                    </div>
+                    <div style="margin-bottom: 1rem;">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.3rem;">
+                            <span>City Commuters</span>
+                            <strong>$15,200</strong>
+                        </div>
+                        <div style="background: #e0e0e0; border-radius: 4px; width: 100%; height: 15px;">
+                            <div style="background: var(--brand-accent-color); width: 45%; height: 100%; border-radius: 4px;"></div>
+                        </div>
+                    </div>
+                    <div style="margin-bottom: 1rem;">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.3rem;">
+                            <span>Racing E-Bikes</span>
+                            <strong>$5,800</strong>
+                        </div>
+                        <div style="background: #e0e0e0; border-radius: 4px; width: 100%; height: 15px;">
+                            <div style="background: #2196F3; width: 20%; height: 100%; border-radius: 4px;"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.3rem;">
+                            <span>Accessories & Parts</span>
+                            <strong>$1,730</strong>
+                        </div>
+                        <div style="background: #e0e0e0; border-radius: 4px; width: 100%; height: 15px;">
+                            <div style="background: #FF9800; width: 8%; height: 100%; border-radius: 4px;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Activity Timeline -->
+            <div style="flex: 1; min-width: 300px;">
+                <h2>Recent Activity</h2>
+                <div class="card" style="padding: 1.5rem; height: 100%; overflow-y: auto; max-height: 300px;">
+                    <div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
+                        <div style="color: var(--brand-primary-color); font-size: 1.2rem;">🛒</div>
+                        <div>
+                            <p style="margin: 0; font-size: 0.9rem;"><strong>Jane Doe</strong> purchased Peak Explorer Mountain.</p>
+                            <span style="font-size: 0.75rem; color: gray;">10 minutes ago</span>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
+                        <div style="color: #4CAF50; font-size: 1.2rem;">👤</div>
+                        <div>
+                            <p style="margin: 0; font-size: 0.9rem;">New user <strong>Michael B.</strong> registered.</p>
+                            <span style="font-size: 0.75rem; color: gray;">1 hour ago</span>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
+                        <div style="color: #FF9800; font-size: 1.2rem;">⭐</div>
+                        <div>
+                            <p style="margin: 0; font-size: 0.9rem;"><strong>Sarah W.</strong> left a 4-star review.</p>
+                            <span style="font-size: 0.75rem; color: gray;">3 hours ago</span>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 1rem;">
+                        <div style="color: #F44336; font-size: 1.2rem;">⚠️</div>
+                        <div>
+                            <p style="margin: 0; font-size: 0.9rem;">Stock low: <strong>Advanced LED Helmet</strong>.</p>
+                            <span style="font-size: 0.75rem; color: gray;">5 hours ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lower Row: Top Products & Support -->
+        <section class="w-full" style="max-width: 1200px; display: flex; flex-wrap: wrap; gap: 2rem; margin-top: 2rem; justify-content: space-between;">
+            
+            <!-- Top Selling Products -->
+            <div style="flex: 1; min-width: 300px;">
+                <h2>Top Selling E-Bikes</h2>
+                <div class="card" style="padding: 1rem; height: 100%;">
+                    <ul style="list-style-type: none; padding: 0;">
+                        <li style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid #ddd;">
+                            <span>🥇 Peak Explorer Mountain</span>
+                            <strong style="color: green;">45 units</strong>
+                        </li>
+                        <li style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid #ddd;">
+                            <span>🥈 Metro Glide City E-Bike</span>
+                            <strong style="color: green;">32 units</strong>
+                        </li>
+                        <li style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid #ddd;">
+                            <span>🥉 Aero Speedster Racing</span>
+                            <strong style="color: green;">28 units</strong>
+                        </li>
+                        <li style="display: flex; justify-content: space-between; padding: 0.5rem 0;">
+                            <span>⭐ Off-Road Beast Pro</span>
+                            <strong style="color: green;">15 units</strong>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Recent Support Inquiries -->
+            <div style="flex: 1; min-width: 300px;">
+                <h2>Support Messages</h2>
+                <div class="card" style="padding: 1rem; height: 100%;">
+                    <div style="margin-bottom: 1rem; border-bottom: 1px solid #eee; padding-bottom: 0.5rem;">
+                        <strong>Jane Doe</strong> <span style="font-size: 0.8rem; color: gray;">(2 hours ago)</span>
+                        <p style="margin: 0.2rem 0; font-size: 0.9rem;">Question about battery range for Peak Explorer...</p>
+                        <a href="#" style="font-size: 0.8rem; color: var(--brand-primary-color);">Reply</a> | <a href="#" style="font-size: 0.8rem; color: red;">Dismiss</a>
+                    </div>
+                    <div style="margin-bottom: 1rem; border-bottom: 1px solid #eee; padding-bottom: 0.5rem;">
+                        <strong>Mark Smith</strong> <span style="font-size: 0.8rem; color: gray;">(5 hours ago)</span>
+                        <p style="margin: 0.2rem 0; font-size: 0.9rem;">Need to change shipping address on my order.</p>
+                        <a href="#" style="font-size: 0.8rem; color: var(--brand-primary-color);">Reply</a> | <a href="#" style="font-size: 0.8rem; color: red;">Dismiss</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recent Orders Table -->
+        <section class="w-full" style="max-width: 1200px; margin-top: 2rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h2>Recent Orders</h2>
+                <a href="#" style="color: var(--brand-primary-color); font-weight: bold; text-decoration: none;">View All Orders &rarr;</a>
+            </div>
             <div class="table-container">
                 <table>
                     <thead>
@@ -41,6 +191,7 @@
                             <th style="min-width: 200px; max-width: 300px;">Product</th>
                             <th style="min-width: 100px; max-width: 150px;">Status</th>
                             <th style="min-width: 100px; max-width: 150px;">Total</th>
+                            <th style="min-width: 100px; max-width: 150px;">Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -50,6 +201,7 @@
                             <td>Peak Explorer Mountain E-Bike</td>
                             <td style="color: green; font-weight: bold;">Shipped</td>
                             <td>$1,899.00</td>
+                            <td><button class="sm-button border-button">Manage</button></td>
                         </tr>
                         <tr>
                             <td>#ORD-8902</td>
@@ -57,6 +209,7 @@
                             <td>Aero Speedster Racing E-Bike</td>
                             <td style="color: orange; font-weight: bold;">Processing</td>
                             <td>$2,499.00</td>
+                            <td><button class="sm-button border-button">Manage</button></td>
                         </tr>
                         <tr>
                             <td>#ORD-8903</td>
@@ -64,6 +217,7 @@
                             <td>Metro Glide City E-Bike</td>
                             <td style="color: orange; font-weight: bold;">Processing</td>
                             <td>$1,299.00</td>
+                            <td><button class="sm-button border-button">Manage</button></td>
                         </tr>
                         <tr>
                             <td>#ORD-8904</td>
@@ -71,6 +225,7 @@
                             <td>Peak Explorer Mountain E-Bike</td>
                             <td style="color: red; font-weight: bold;">Cancelled</td>
                             <td>$1,899.00</td>
+                            <td><button class="sm-button border-button">Manage</button></td>
                         </tr>
                     </tbody>
                 </table>

@@ -4,16 +4,17 @@
 enforceLogin();
 
 function enforceLogin() {
-    const isLoginPage = window.location.pathname.endsWith('login.html');
-    const isSignupPage = window.location.pathname.endsWith('signup.html');
+    const restrictedPages = ['dashboard.html', 'user-dashboard.html', 'admin-settings.html'];
+    const currentPath = window.location.pathname;
     
-    // Allow users to stay on login or signup pages
-    if (isLoginPage || isSignupPage) return;
+    const isRestricted = restrictedPages.some(page => currentPath.endsWith(page));
+    
+    if (!isRestricted) return; // Allow public access to all other pages
 
     const userStr = localStorage.getItem('ebike_user');
     if (!userStr) {
-        // Not logged in, redirect to login page
-        const isRoot = window.location.pathname.endsWith('index.html') || window.location.pathname === '/' || window.location.pathname.endsWith('Electric%20Bike%20Store/');
+        // Not logged in but trying to access a restricted page, redirect to login
+        const isRoot = currentPath.endsWith('index.html') || currentPath === '/' || currentPath.endsWith('Electric%20Bike%20Store/');
         window.location.href = isRoot ? 'pages/login.html' : 'login.html';
     }
 }

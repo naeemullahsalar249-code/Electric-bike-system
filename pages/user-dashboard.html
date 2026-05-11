@@ -11,24 +11,171 @@
     <div id="navbar-placeholder"></div>
 
     <main class="page">
+    <main class="page">
         <h1 class="text-center">My Account</h1>
-        <p class="text-center">Welcome back! Manage your orders and account settings here.</p>
+        <p class="text-center">Welcome back! Manage your orders, bikes, and account settings here.</p>
 
+        <!-- Top Metrics & Status -->
         <section class="card-container">
             <div class="card">
                 <h3>My Rewards Points</h3>
                 <p style="font-size: 2rem; font-weight: bold; color: var(--brand-primary-color);">450</p>
-                <div class="mt-4"><button class="sm-button">Redeem</button></div>
+                <div class="mt-4"><button class="sm-button">Redeem Points</button></div>
             </div>
             <div class="card">
                 <h3>Account Status</h3>
-                <p style="font-size: 2rem; font-weight: bold; color: green;">Active</p>
+                <p style="font-size: 2rem; font-weight: bold; color: green;">Active Member</p>
                 <div class="mt-4"><button class="sm-button border-button">Edit Profile</button></div>
+            </div>
+            <div class="card">
+                <h3>My Wishlist</h3>
+                <p style="font-size: 2rem; font-weight: bold; color: var(--brand-accent-color);">2 Items</p>
+                <div class="mt-4"><button class="sm-button border-button">View Wishlist</button></div>
+            </div>
+            <div class="card">
+                <h3>Store Credit</h3>
+                <p style="font-size: 2rem; font-weight: bold; color: var(--brand-primary-color);">$25.00</p>
+                <div class="mt-4"><button class="sm-button border-button">Add Funds</button></div>
             </div>
         </section>
 
-        <section class="w-full" style="max-width: 1200px;">
-            <h2>My Recent Orders</h2>
+        <!-- Loyalty Progress -->
+        <section class="w-full" style="max-width: 1200px; margin-top: 2rem;">
+            <h2>Loyalty Tier: <span style="color: silver;">Silver</span></h2>
+            <div style="background: #e0e0e0; border-radius: 8px; width: 100%; height: 20px; overflow: hidden; margin-bottom: 0.5rem;">
+                <div style="background: var(--brand-primary-color); width: 65%; height: 100%;"></div>
+            </div>
+            <p style="font-size: 0.9rem; color: #666; margin-top: 0;">You are 350 points away from the <strong>Gold</strong> tier! Keep riding!</p>
+        </section>
+
+        <!-- Second Row: My Garage & Ride Stats -->
+        <section class="w-full" style="max-width: 1200px; display: flex; flex-wrap: wrap; gap: 2rem; margin-top: 2rem; justify-content: space-between;">
+            
+            <!-- My E-Bikes (Garage) -->
+            <div style="flex: 1.5; min-width: 300px;">
+                <h2>My Garage (Registered Bikes)</h2>
+                <div class="card" style="padding: 1.5rem; height: 100%;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; border-bottom: 1px solid #eee; padding-bottom: 1rem;">
+                        <div style="display: flex; gap: 1rem; align-items: center;">
+                            <div style="width: 80px; height: 80px; background: #f4f4f4; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 2rem;">
+                                ⛰️
+                            </div>
+                            <div>
+                                <strong style="font-size: 1.2rem;">Peak Explorer Mountain</strong>
+                                <p style="margin: 0; font-size: 0.85rem; color: #666;">Serial: <span style="font-family: monospace;">VR-MTB-2026-8901</span></p>
+                                <p style="margin: 0; font-size: 0.85rem; color: green; font-weight: bold;">Warranty Active until Oct 2028</p>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="sm-button border-button">Book Service</button>
+                        </div>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div style="display: flex; gap: 1rem; align-items: center;">
+                            <div style="width: 80px; height: 80px; background: #e0f7fa; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 2rem; border: 2px dashed #00bcd4;">
+                                ➕
+                            </div>
+                            <div>
+                                <strong style="font-size: 1.1rem; color: #00bcd4;">Register New Bike</strong>
+                                <p style="margin: 0; font-size: 0.85rem; color: #666;">Activate warranty & tracking.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ride Statistics -->
+            <div style="flex: 1; min-width: 300px;">
+                <h2>My Impact Stats</h2>
+                <div class="card" style="padding: 1.5rem; height: 100%; display: flex; flex-direction: column; justify-content: center; gap: 1rem;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; padding-bottom: 0.5rem;">
+                        <span style="font-size: 1.1rem;">🌍 CO2 Saved</span>
+                        <strong style="font-size: 1.5rem; color: #4CAF50;">145 kg</strong>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; padding-bottom: 0.5rem;">
+                        <span style="font-size: 1.1rem;">🛣️ Distance Ridden</span>
+                        <strong style="font-size: 1.5rem; color: var(--brand-primary-color);">850 miles</strong>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <span style="font-size: 1.1rem;">⏱️ Time in Saddle</span>
+                        <strong style="font-size: 1.5rem; color: var(--brand-accent-color);">42 hrs</strong>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Middle Row: Recommended, Support, Addresses -->
+        <section class="w-full" style="max-width: 1200px; display: flex; flex-wrap: wrap; gap: 2rem; margin-top: 2rem; justify-content: space-between;">
+            
+            <!-- Recommended for You -->
+            <div style="flex: 1; min-width: 300px;">
+                <h2>Recommended for You</h2>
+                <div class="card" style="padding: 1rem; height: 100%;">
+                    <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 1rem; border-bottom: 1px solid #eee; padding-bottom: 0.5rem;">
+                        <div style="width: 60px; height: 60px; background: #f4f4f4; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                            🚲
+                        </div>
+                        <div>
+                            <strong>City Commuter Pro</strong>
+                            <p style="margin: 0; color: var(--brand-primary-color); font-weight: bold;">$1,499 <span style="font-size:0.8rem; color:gray; text-decoration:line-through;">$1,699</span></p>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 1rem; align-items: center;">
+                        <div style="width: 60px; height: 60px; background: #f4f4f4; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                            🪖
+                        </div>
+                        <div>
+                            <strong>Advanced LED Helmet</strong>
+                            <p style="margin: 0; color: var(--brand-primary-color); font-weight: bold;">$89</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Support Tickets -->
+            <div style="flex: 1; min-width: 300px;">
+                <h2>My Support Tickets</h2>
+                <div class="card" style="padding: 1rem; height: 100%;">
+                    <div style="margin-bottom: 1rem; border-bottom: 1px solid #eee; padding-bottom: 0.5rem;">
+                        <strong>Ticket #T-4029</strong> <span style="font-size: 0.8rem; background: #e0f2f1; color: #00796b; padding: 2px 6px; border-radius: 4px; margin-left: 0.5rem;">Resolved</span>
+                        <p style="margin: 0.2rem 0; font-size: 0.9rem;">Issue with battery charger.</p>
+                    </div>
+                    <div>
+                        <strong>Ticket #T-5192</strong> <span style="font-size: 0.8rem; background: #fff3e0; color: #e65100; padding: 2px 6px; border-radius: 4px; margin-left: 0.5rem;">Open</span>
+                        <p style="margin: 0.2rem 0; font-size: 0.9rem;">Inquiry about warranty extension.</p>
+                    </div>
+                    <div class="mt-4">
+                        <button class="sm-button border-button" style="width: 100%;">Create New Ticket</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Saved Information -->
+            <div style="flex: 1; min-width: 300px;">
+                <h2>Saved Information</h2>
+                <div class="card" style="padding: 1rem; height: 100%;">
+                    <div style="margin-bottom: 1rem; border-bottom: 1px solid #eee; padding-bottom: 0.5rem;">
+                        <h4 style="margin: 0 0 0.5rem 0;">Primary Address</h4>
+                        <p style="margin: 0; font-size: 0.9rem; color: #555;">123 Electric Ave<br>Seattle, WA 98101</p>
+                        <a href="#" style="font-size: 0.8rem; color: var(--brand-primary-color);">Edit Address</a>
+                    </div>
+                    <div>
+                        <h4 style="margin: 0 0 0.5rem 0;">Payment Method</h4>
+                        <p style="margin: 0; font-size: 0.9rem; color: #555;">Visa ending in **** 4242</p>
+                        <a href="#" style="font-size: 0.8rem; color: var(--brand-primary-color);">Manage Cards</a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Recent Orders Table -->
+        <section class="w-full" style="max-width: 1200px; margin-top: 2rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h2>My Recent Orders</h2>
+                <a href="#" style="color: var(--brand-primary-color); font-weight: bold; text-decoration: none;">View Order History &rarr;</a>
+            </div>
             <div class="table-container">
                 <table>
                     <thead>
@@ -38,6 +185,7 @@
                             <th style="min-width: 100px; max-width: 150px;">Date</th>
                             <th style="min-width: 100px; max-width: 150px;">Status</th>
                             <th style="min-width: 100px; max-width: 150px;">Total</th>
+                            <th style="min-width: 100px; max-width: 150px;">Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -47,6 +195,7 @@
                             <td>Oct 12, 2026</td>
                             <td style="color: green; font-weight: bold;">Shipped</td>
                             <td>$1,899.00</td>
+                            <td><button class="sm-button border-button">Track</button></td>
                         </tr>
                         <tr>
                             <td>#ORD-8850</td>
@@ -54,6 +203,7 @@
                             <td>Sep 05, 2026</td>
                             <td style="color: green; font-weight: bold;">Delivered</td>
                             <td>$125.00</td>
+                            <td><button class="sm-button border-button">Invoice</button></td>
                         </tr>
                     </tbody>
                 </table>
@@ -61,6 +211,7 @@
         </section>
 
     </main>
+
 
     <footer>
         <div class="footer-container">
