@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoltRider E-Bikes - Shopping Cart</title>
+    <link rel="stylesheet" href="../cssFile/globalStyles.css">
+</head>
+<body>
+
+    <div id="navbar-placeholder"></div>
+
+    <main class="page">
+        <h1 class="text-center">Your Shopping Cart</h1>
+        
+        <section class="w-full max-w-1000">
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="min-w-80 max-w-120">Image</th>
+                            <th class="min-w-200 max-w-300">Product Name</th>
+                            <th class="min-w-80 max-w-120">Quantity</th>
+                            <th class="min-w-100 max-w-150">Price</th>
+                            <th class="min-w-100 max-w-150">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="../sources/mountain-bike-real.webp" alt="Peak Explorer" class="w-80 rounded-base"></td>
+                            <td>Peak Explorer Mountain E-Bike</td>
+                            <td>
+                                <input type="number" value="1" min="1" class="w-60">
+                            </td>
+                            <td>$1,899.00</td>
+                            <td class="font-bold">$1,899.00</td>
+                        </tr>
+                        <tr>
+                            <td><img src="../sources/city-bike-real.jpg" alt="Metro Glide" class="w-80 rounded-base"></td>
+                            <td>Metro Glide City E-Bike</td>
+                            <td>
+                                <input type="number" value="2" min="1" class="w-60">
+                            </td>
+                            <td>$1,299.00</td>
+                            <td class="font-bold">$2,598.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="card mt-6 ml-auto w-350">
+                <h2>Order Summary</h2>
+                <div class="flex justify-between mb-2">
+                    <span>Subtotal</span>
+                    <span>$4,497.00</span>
+                </div>
+                <div class="flex justify-between mb-2">
+                    <span>Shipping</span>
+                    <span>$50.00</span>
+                </div>
+                <div class="flex justify-between mb-4 font-bold text-xl border-t-muted pt-2">
+                    <span>Total</span>
+                    <span>$4,547.00</span>
+                </div>
+                <button class="w-full">Proceed to Checkout</button>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div>
+                <h2>VoltRider E-Bikes</h2>
+                <p>&copy; 2026 VoltRider E-Bikes.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../jsFile/jsFunctions.js"></script>
+</body>
+</html>

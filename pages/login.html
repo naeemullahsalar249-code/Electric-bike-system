@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoltRider E-Bikes - Login</title>
+    <link rel="stylesheet" href="../cssFile/globalStyles.css">
+</head>
+<body>
+
+    <!-- Placeholder for Navbar -->
+    <div id="navbar-placeholder"></div>
+
+    <main class="page flex-center">
+        <div class="form-container">
+            <h2 class="text-center">Welcome to VoltRider E-Bikes</h2>
+            <p class="text-center mb-4">Sign in to your account to continue.</p>
+            
+            <form id="login-form">
+                <div>
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="john@example.com">
+                </div>
+                <div>
+                    <label for="role">Login As</label>
+                    <div class="select-container">
+                        <select id="role" name="role" required>
+                            <option value="user">Normal User</option>
+                            <option value="admin">Administrator</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required placeholder="********">
+                </div>
+                <div class="mt-4">
+                    <button type="submit" class="w-full">Sign In</button>
+                </div>
+                <div class="text-center mt-4">
+                    <p>Don't have an account? <a href="signup.html" class="link-button">Sign up</a></p>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div>
+                <h2>VoltRider E-Bikes</h2>
+                <p>&copy; 2026 VoltRider E-Bikes.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../jsFile/jsFunctions.js"></script>
+</body>
+</html>

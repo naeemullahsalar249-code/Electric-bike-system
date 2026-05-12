@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoltRider E-Bikes - Dashboard</title>
+    <link rel="stylesheet" href="../cssFile/globalStyles.css">
+</head>
+<body>
+
+    <!-- Placeholder for Navbar -->
+    <div id="navbar-placeholder"></div>
+
+    <main class="page">
+        <h1 class="text-center">Admin Dashboard</h1>
+        <p class="text-center">Manage your store's performance, orders, and inventory.</p>
+
+        <!-- Quick Actions -->
+        <section class="w-full max-w-1200 mb-8 flex gap-4 justify-center flex-wrap">
+            <button class="sm-button">➕ Add New Product</button>
+            <button class="sm-button border-button">📊 Generate Sales Report</button>
+            <button class="sm-button border-button">📧 Send Newsletter</button>
+            <button class="sm-button border-button">⚙️ Store Settings</button>
+            <button class="sm-button border-button">👥 Manage Users</button>
+        </section>
+
+        <!-- Key Metrics -->
+        <section class="card-container">
+            <div class="card">
+                <h3>Total Revenue</h3>
+                <p class="text-3xl font-bold text-primary">$45,230</p>
+                <p class="text-base text-green">&#9650; +12% from last month</p>
+            </div>
+            <div class="card">
+                <h3>Active Orders</h3>
+                <p class="text-3xl font-bold text-accent">12</p>
+                <p class="text-base text-gray-500">4 pending shipment</p>
+            </div>
+            <div class="card">
+                <h3>Total Customers</h3>
+                <p class="text-3xl font-bold text-primary">1,284</p>
+                <p class="text-base text-green">&#9650; +35 new this week</p>
+            </div>
+            <div class="card">
+                <h3>Inventory Alerts</h3>
+                <p class="text-3xl font-bold text-red">3 Models</p>
+                <div class="mt-4"><button class="sm-button border-button w-full">Restock</button></div>
+            </div>
+        </section>
+
+        <!-- Middle Row: Analytics & Activity Feed -->
+        <section class="w-full max-w-1200 flex flex-wrap gap-8 mt-8 justify-between">
+            
+            <!-- Revenue Breakdown (CSS Chart) -->
+            <div class="flex-1-5 min-w-300">
+                <h2>Revenue by Category</h2>
+                <div class="card p-6 h-full">
+                    <div class="mb-4">
+                        <div class="flex justify-between mb-1">
+                            <span>Mountain E-Bikes</span>
+                            <strong>$22,500</strong>
+                        </div>
+                        <div class="bg-gray-300 rounded-sm w-full h-15">
+                            <div class="bg-primary w-65p h-full rounded-sm"></div>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <div class="flex justify-between mb-1">
+                            <span>City Commuters</span>
+                            <strong>$15,200</strong>
+                        </div>
+                        <div class="bg-gray-300 rounded-sm w-full h-15">
+                            <div class="bg-accent w-45p h-full rounded-sm"></div>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <div class="flex justify-between mb-1">
+                            <span>Racing E-Bikes</span>
+                            <strong>$5,800</strong>
+                        </div>
+                        <div class="bg-gray-300 rounded-sm w-full h-15">
+                            <div class="bg-blue w-20p h-full rounded-sm"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span>Accessories & Parts</span>
+                            <strong>$1,730</strong>
+                        </div>
+                        <div class="bg-gray-300 rounded-sm w-full h-15">
+                            <div class="bg-orange w-8p h-full rounded-sm"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Activity Timeline -->
+            <div class="flex-1 min-w-300">
+                <h2>Recent Activity</h2>
+                <div class="card p-6 h-full overflow-y-auto max-h-300">
+                    <div class="flex gap-4 mb-4">
+                        <div class="text-primary text-xl">🛒</div>
+                        <div>
+                            <p class="m-0 text-base"><strong>Jane Doe</strong> purchased Peak Explorer Mountain.</p>
+                            <span class="text-xs text-gray">10 minutes ago</span>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 mb-4">
+                        <div class="text-green-500 text-xl">👤</div>
+                        <div>
+                            <p class="m-0 text-base">New user <strong>Michael B.</strong> registered.</p>
+                            <span class="text-xs text-gray">1 hour ago</span>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 mb-4">
+                        <div class="text-orange-500 text-xl">⭐</div>
+                        <div>
+                            <p class="m-0 text-base"><strong>Sarah W.</strong> left a 4-star review.</p>
+                            <span class="text-xs text-gray">3 hours ago</span>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="text-red-500 text-xl">⚠️</div>
+                        <div>
+                            <p class="m-0 text-base">Stock low: <strong>Advanced LED Helmet</strong>.</p>
+                            <span class="text-xs text-gray">5 hours ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lower Row: Top Products & Support -->
+        <section class="w-full max-w-1200 flex flex-wrap gap-8 mt-8 justify-between">
+            
+            <!-- Top Selling Products -->
+            <div class="flex-1 min-w-300">
+                <h2>Top Selling E-Bikes</h2>
+                <div class="card p-4 h-full">
+                    <ul class="list-none p-0">
+                        <li class="flex justify-between py-2 border-b-ddd">
+                            <span>🥇 Peak Explorer Mountain</span>
+                            <strong class="text-green">45 units</strong>
+                        </li>
+                        <li class="flex justify-between py-2 border-b-ddd">
+                            <span>🥈 Metro Glide City E-Bike</span>
+                            <strong class="text-green">32 units</strong>
+                        </li>
+                        <li class="flex justify-between py-2 border-b-ddd">
+                            <span>🥉 Aero Speedster Racing</span>
+                            <strong class="text-green">28 units</strong>
+                        </li>
+                        <li class="flex justify-between py-2">
+                            <span>⭐ Off-Road Beast Pro</span>
+                            <strong class="text-green">15 units</strong>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Recent Support Inquiries -->
+            <div class="flex-1 min-w-300">
+                <h2>Support Messages</h2>
+                <div class="card p-4 h-full">
+                    <div class="mb-4 border-b-eee pb-2">
+                        <strong>Jane Doe</strong> <span class="text-sm2 text-gray">(2 hours ago)</span>
+                        <p class="my-1 text-base">Question about battery range for Peak Explorer...</p>
+                        <a href="#" class="text-sm2 text-primary">Reply</a> | <a href="#" class="text-sm2 text-red">Dismiss</a>
+                    </div>
+                    <div class="mb-4 border-b-eee pb-2">
+                        <strong>Mark Smith</strong> <span class="text-sm2 text-gray">(5 hours ago)</span>
+                        <p class="my-1 text-base">Need to change shipping address on my order.</p>
+                        <a href="#" class="text-sm2 text-primary">Reply</a> | <a href="#" class="text-sm2 text-red">Dismiss</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recent Orders Table -->
+        <section class="w-full max-w-1200 mt-8">
+            <div class="flex justify-between items-center">
+                <h2>Recent Orders</h2>
+                <a href="#" class="text-primary font-bold no-underline">View All Orders &rarr;</a>
+            </div>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="min-w-100 max-w-150">Order ID</th>
+                            <th class="min-w-150 max-w-200">Customer Name</th>
+                            <th class="min-w-200 max-w-300">Product</th>
+                            <th class="min-w-100 max-w-150">Status</th>
+                            <th class="min-w-100 max-w-150">Total</th>
+                            <th class="min-w-100 max-w-150">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#ORD-8901</td>
+                            <td>Jane Doe</td>
+                            <td>Peak Explorer Mountain E-Bike</td>
+                            <td class="text-green font-bold">Shipped</td>
+                            <td>$1,899.00</td>
+                            <td><button class="sm-button border-button">Manage</button></td>
+                        </tr>
+                        <tr>
+                            <td>#ORD-8902</td>
+                            <td>John Smith</td>
+                            <td>Aero Speedster Racing E-Bike</td>
+                            <td class="text-orange font-bold">Processing</td>
+                            <td>$2,499.00</td>
+                            <td><button class="sm-button border-button">Manage</button></td>
+                        </tr>
+                        <tr>
+                            <td>#ORD-8903</td>
+                            <td>Emily Chen</td>
+                            <td>Metro Glide City E-Bike</td>
+                            <td class="text-orange font-bold">Processing</td>
+                            <td>$1,299.00</td>
+                            <td><button class="sm-button border-button">Manage</button></td>
+                        </tr>
+                        <tr>
+                            <td>#ORD-8904</td>
+                            <td>Michael Brown</td>
+                            <td>Peak Explorer Mountain E-Bike</td>
+                            <td class="text-red font-bold">Cancelled</td>
+                            <td>$1,899.00</td>
+                            <td><button class="sm-button border-button">Manage</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div>
+                <h2>VoltRider E-Bikes</h2>
+                <p>Powering your journey forward.</p>
+            </div>
+            <div>
+                <p>&copy; 2026 VoltRider E-Bikes.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../jsFile/jsFunctions.js"></script>
+    <script>
+        // Restrict access to admin only
+        document.addEventListener('DOMContentLoaded', () => {
+            const userStr = localStorage.getItem('ebike_user');
+            if (userStr) {
+                const user = JSON.parse(userStr);
+                if (user.role !== 'admin') {
+                    alert('Access Denied: You do not have permission to view the Admin Dashboard.');
+                    window.location.href = 'user-dashboard.html';
+                }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoltRider E-Bikes - My Dashboard</title>
+    <link rel="stylesheet" href="../cssFile/globalStyles.css">
+</head>
+<body>
+
+    <div id="navbar-placeholder"></div>
+
+    <main class="page">
+    <main class="page">
+        <h1 class="text-center">My Account</h1>
+        <p class="text-center">Welcome back! Manage your orders, bikes, and account settings here.</p>
+
+        <!-- Top Metrics & Status -->
+        <section class="card-container">
+            <div class="card">
+                <h3>My Rewards Points</h3>
+                <p class="text-3xl font-bold text-primary">450</p>
+                <div class="mt-4"><button class="sm-button">Redeem Points</button></div>
+            </div>
+            <div class="card">
+                <h3>Account Status</h3>
+                <p class="text-3xl font-bold text-green">Active Member</p>
+                <div class="mt-4"><button class="sm-button border-button">Edit Profile</button></div>
+            </div>
+            <div class="card">
+                <h3>My Wishlist</h3>
+                <p class="text-3xl font-bold text-accent">2 Items</p>
+                <div class="mt-4"><button class="sm-button border-button">View Wishlist</button></div>
+            </div>
+            <div class="card">
+                <h3>Store Credit</h3>
+                <p class="text-3xl font-bold text-primary">$25.00</p>
+                <div class="mt-4"><button class="sm-button border-button">Add Funds</button></div>
+            </div>
+        </section>
+
+        <!-- Loyalty Progress -->
+        <section class="w-full max-w-1200 mt-8">
+            <h2>Loyalty Tier: <span class="text-silver">Silver</span></h2>
+            <div class="bg-gray-300 rounded-md w-full h-20 overflow-hidden mb-2">
+                <div class="bg-primary w-65p h-full"></div>
+            </div>
+            <p class="text-base text-gray-500 mt-0">You are 350 points away from the <strong>Gold</strong> tier! Keep riding!</p>
+        </section>
+
+        <!-- Second Row: My Garage & Ride Stats -->
+        <section class="w-full max-w-1200 flex flex-wrap gap-8 mt-8 justify-between">
+            
+            <!-- My E-Bikes (Garage) -->
+            <div class="flex-1-5 min-w-300">
+                <h2>My Garage (Registered Bikes)</h2>
+                <div class="card p-6 h-full">
+                    <div class="flex justify-between items-center mb-4 border-b-eee pb-4">
+                        <div class="flex gap-4 items-center">
+                            <div class="w-80 h-80 bg-gray-100 rounded-md flex items-center justify-center text-3xl">
+                                ⛰️
+                            </div>
+                            <div>
+                                <strong class="text-xl">Peak Explorer Mountain</strong>
+                                <p class="m-0 text-sm text-gray-500">Serial: <span class="font-mono">VR-MTB-2026-8901</span></p>
+                                <p class="m-0 text-sm text-green font-bold">Warranty Active until Oct 2028</p>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="sm-button border-button">Book Service</button>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div class="flex gap-4 items-center">
+                            <div class="w-80 h-80 bg-cyan-50 rounded-md flex items-center justify-center text-3xl border-dashed-cyan">
+                                ➕
+                            </div>
+                            <div>
+                                <strong class="text-lg text-cyan-500">Register New Bike</strong>
+                                <p class="m-0 text-sm text-gray-500">Activate warranty & tracking.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ride Statistics -->
+            <div class="flex-1 min-w-300">
+                <h2>My Impact Stats</h2>
+                <div class="card p-6 h-full flex flex-col justify-center gap-4">
+                    <div class="flex justify-between items-center border-b-eee pb-2">
+                        <span class="text-lg">🌍 CO2 Saved</span>
+                        <strong class="text-2xl text-green-500">145 kg</strong>
+                    </div>
+                    <div class="flex justify-between items-center border-b-eee pb-2">
+                        <span class="text-lg">🛣️ Distance Ridden</span>
+                        <strong class="text-2xl text-primary">850 miles</strong>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-lg">⏱️ Time in Saddle</span>
+                        <strong class="text-2xl text-accent">42 hrs</strong>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Middle Row: Recommended, Support, Addresses -->
+        <section class="w-full max-w-1200 flex flex-wrap gap-8 mt-8 justify-between">
+            
+            <!-- Recommended for You -->
+            <div class="flex-1 min-w-300">
+                <h2>Recommended for You</h2>
+                <div class="card p-4 h-full">
+                    <div class="flex gap-4 items-center mb-4 border-b-eee pb-2">
+                        <div class="w-60 h-60 bg-gray-100 rounded-sm flex items-center justify-center text-2xl">
+                            🚲
+                        </div>
+                        <div>
+                            <strong>City Commuter Pro</strong>
+                            <p class="m-0 text-primary font-bold">$1,499 <span class="text-sm2 text-gray line-through">$1,699</span></p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 items-center">
+                        <div class="w-60 h-60 bg-gray-100 rounded-sm flex items-center justify-center text-2xl">
+                            🪖
+                        </div>
+                        <div>
+                            <strong>Advanced LED Helmet</strong>
+                            <p class="m-0 text-primary font-bold">$89</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Support Tickets -->
+            <div class="flex-1 min-w-300">
+                <h2>My Support Tickets</h2>
+                <div class="card p-4 h-full">
+                    <div class="mb-4 border-b-eee pb-2">
+                        <strong>Ticket #T-4029</strong> <span class="text-sm2 bg-teal-50 text-teal-700 px-2-py-1 rounded-sm ml-2">Resolved</span>
+                        <p class="my-1 text-base">Issue with battery charger.</p>
+                    </div>
+                    <div>
+                        <strong>Ticket #T-5192</strong> <span class="text-sm2 bg-orange-50 text-orange-900 px-2-py-1 rounded-sm ml-2">Open</span>
+                        <p class="my-1 text-base">Inquiry about warranty extension.</p>
+                    </div>
+                    <div class="mt-4">
+                        <button class="sm-button border-button w-full">Create New Ticket</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Saved Information -->
+            <div class="flex-1 min-w-300">
+                <h2>Saved Information</h2>
+                <div class="card p-4 h-full">
+                    <div class="mb-4 border-b-eee pb-2">
+                        <h4 class="mb-2">Primary Address</h4>
+                        <p class="m-0 text-base text-gray-600">123 Electric Ave<br>Seattle, WA 98101</p>
+                        <a href="#" class="text-sm2 text-primary">Edit Address</a>
+                    </div>
+                    <div>
+                        <h4 class="mb-2">Payment Method</h4>
+                        <p class="m-0 text-base text-gray-600">Visa ending in **** 4242</p>
+                        <a href="#" class="text-sm2 text-primary">Manage Cards</a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Recent Orders Table -->
+        <section class="w-full max-w-1200 mt-8">
+            <div class="flex justify-between items-center">
+                <h2>My Recent Orders</h2>
+                <a href="#" class="text-primary font-bold no-underline">View Order History &rarr;</a>
+            </div>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="min-w-100 max-w-150">Order ID</th>
+                            <th class="min-w-200 max-w-300">Product</th>
+                            <th class="min-w-100 max-w-150">Date</th>
+                            <th class="min-w-100 max-w-150">Status</th>
+                            <th class="min-w-100 max-w-150">Total</th>
+                            <th class="min-w-100 max-w-150">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#ORD-8901</td>
+                            <td>Peak Explorer Mountain E-Bike</td>
+                            <td>Oct 12, 2026</td>
+                            <td class="text-green font-bold">Shipped</td>
+                            <td>$1,899.00</td>
+                            <td><button class="sm-button border-button">Track</button></td>
+                        </tr>
+                        <tr>
+                            <td>#ORD-8850</td>
+                            <td>Safety Helmet & Lock Bundle</td>
+                            <td>Sep 05, 2026</td>
+                            <td class="text-green font-bold">Delivered</td>
+                            <td>$125.00</td>
+                            <td><button class="sm-button border-button">Invoice</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer>
+        <div class="footer-container">
+            <div>
+                <h2>VoltRider E-Bikes</h2>
+                <p>Powering your journey forward.</p>
+            </div>
+            <div>
+                <p>&copy; 2026 VoltRider E-Bikes.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../jsFile/jsFunctions.js"></script>
+</body>
+</html>
